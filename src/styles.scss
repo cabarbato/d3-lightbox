@@ -1,0 +1,54 @@
+html,
+body {
+  margin: 0;
+  background: linear-gradient(348deg, #495057 0%, #0b0c0e 100%);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  svg {
+    overflow: visible !important;
+
+    g {
+      opacity: 0;
+      transform-origin: center center;
+      position: absolute;
+
+       & > * {
+         position: relative;
+        }
+
+      rect.border {
+        filter: drop-shadow( 0 5px 6px rgba(0, 0, 0, 0.8));
+        stroke: #fff;
+        stroke-width: 10px;
+        stroke-linecap: round;
+        fill: #fff;
+      }
+      
+      rect.gradient {
+        fill:url(#shadowGradient)
+      }
+  }
+  }
+}
