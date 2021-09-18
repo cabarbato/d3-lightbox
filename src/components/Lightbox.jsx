@@ -21,7 +21,7 @@ export default function Lightbox(props) {
         </div>
       </Modal.Body>
       <Modal.Footer className="justify-content-center">
-        <div>
+        <div className="modal-footer__content">
           <h1>{category?.split('').join('⋅')}</h1>
           <p>{selected_quote?.Quote}</p>
           <cite>{selected_quote?.Author}</cite>

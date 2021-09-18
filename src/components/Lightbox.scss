@@ -1,4 +1,4 @@
-@import "./../assets/scss/variables";
+@import "./../assets/scss/main";
 
 .modal-content {
   color: $light;
@@ -21,25 +21,32 @@
   .modal-footer {
     border: 0px none;
     text-align: center;
-    h1 {
-      letter-spacing: .75rem;
-      display: inline-block;
-      padding-bottom: .25rem;
-      border-bottom: 1px solid $light;
-    }
-    p {
-        margin: 0.5rem auto ;
-    }
-    cite {
-    font-size: .8rem;
-    padding-top: 0;
-    position: relative;
-    
-    &::before {
-    content: '—';
-    position: absolute;
-    right: calc(100% + .25rem);
-    }
+
+    &__content {
+      max-width: 100%;
+      h1 {
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid $light;
+
+        @include media-breakpoint-up(lg) {
+          display: inline-block;
+          letter-spacing: 0.75rem;
+        }
+      }
+      p {
+        margin: 0.5rem auto;
+      }
+      cite {
+        font-size: 0.8rem;
+        padding-top: 0;
+        position: relative;
+
+        &::before {
+          content: "—";
+          position: absolute;
+          right: calc(100% + 0.25rem);
+        }
+      }
     }
   }
 }
