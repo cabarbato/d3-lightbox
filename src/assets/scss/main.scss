@@ -39,13 +39,14 @@ body {
     overflow: visible !important;
 
     g {
-      opacity: 0;
       transform-origin: center center;
       position: absolute;
 
       & > * {
         position: relative;
         transform-origin: center center;
+        opacity: 0;
+        transition: opacity 300ms linear 1s;
       }
 
       rect.border {

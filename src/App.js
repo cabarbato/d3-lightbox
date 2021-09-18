@@ -9,8 +9,8 @@ import categories from "./assets/data/categories.json";
 
 gsap.registerPlugin(Draggable);
 const img_dims = {
-  width: 800,
-  height: 600
+  width: 660,
+  height: 495
 };
 const image = `//source.unsplash.com/random/${img_dims.width}x${img_dims.height}/`;
 const data = {
@@ -66,7 +66,10 @@ export default function App() {
       .attr("width", (d) => img_dims.width / 4)
       .attr("height", (d) => img_dims.height / 4)
       .attr("rx", 1)
-      .style("transform", (d) => `rotate(${d.rotate}deg)`);
+      .style("transform", (d) => `rotate(${d.rotate}deg)`)
+      .transition()
+      .duration(300)
+      .style("opacity", 1);
 
     g.append("image")
       .attr("x", (d) => d.x0)
@@ -75,7 +78,10 @@ export default function App() {
       .attr("height", (d) => img_dims.height / 4)
       .attr("href", (d) => d.data.url)
       .attr("data-category", (d) => d.data.category)
-      .style("transform", (d) => `rotate(${d.rotate}deg)`);
+      .style("transform", (d) => `rotate(${d.rotate}deg)`)
+      .transition()
+      .duration(300)
+      .style("opacity", 1);
 
     g.nodes().forEach((el) => {
       Draggable.create(el, {
