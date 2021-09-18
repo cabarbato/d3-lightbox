@@ -1,0 +1,45 @@
+@import "./../assets/scss/variables";
+
+.modal-content {
+  color: $light;
+  background-color: $dark !important;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.8);
+  padding: 3rem;
+  padding-bottom: 0.5rem;
+
+  .modal-body {
+    &__content {
+      padding: 0.25rem;
+      border: 1px solid $light;
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+  }
+  .modal-footer {
+    border: 0px none;
+    text-align: center;
+    h1 {
+      letter-spacing: .75rem;
+      display: inline-block;
+      padding-bottom: .25rem;
+      border-bottom: 1px solid $light;
+    }
+    p {
+        margin: 0.5rem auto ;
+    }
+    cite {
+    font-size: .8rem;
+    padding-top: 0;
+    position: relative;
+    
+    &::before {
+    content: '—';
+    position: absolute;
+    right: calc(100% + .25rem);
+    }
+    }
+  }
+}
